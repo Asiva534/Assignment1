@@ -17,7 +17,7 @@ object DaysFinder extends App{
    */
   private def findMonthFirstDay(fromYear:Int,toYear:Int,dayOfWeek:DayOfWeek):Int = {
     var date1 = LocalDate.of(fromYear, Month.JANUARY, 1)
-    val endDate = LocalDate.of(toYear, Month.JANUARY, 1)
+    val endDate = LocalDate.of(toYear, Month.DECEMBER, 31)
     var count = 0
     while (date1.isBefore(endDate)) {
       date1 = date1.plusMonths(1)
